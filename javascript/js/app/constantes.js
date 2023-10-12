@@ -1,0 +1,4 @@
+const DIAS_SEMANAS = 7;
+const DIAS_ANIOS = 365;
+
+export { DIAS_SEMANAS, DIAS_ANIOS };
