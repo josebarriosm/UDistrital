@@ -12,11 +12,7 @@ console.log(person1.getFullName());
 
 // Clase Hija - Teacher
 class Teacher extends Person {
-  constructor(
-    firstname: string,
-    lastname: string,
-    public code: string
-  ) {
+  constructor(firstname: string, lastname: string, public code: string) {
     super(firstname, lastname); // Se invoca las propiedades de la clase padre con super()
   }
 }
@@ -31,9 +27,9 @@ console.log(teacher2.getFullName());
 
 // Clase Hija - Student
 class Student extends Person {
-    constructor(firstname:string, lastname:string, avg:number){
-        super(firstname, lastname);
-    }
+  constructor(firstname: string, lastname: string, avg: number) {
+    super(firstname, lastname);
+  }
 }
 
 const student1: Student = new Student("Roy", "Logan", 3.2);
