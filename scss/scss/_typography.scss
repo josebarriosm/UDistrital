@@ -1,0 +1,34 @@
+@use "fonts" as f;
+@use "variables" as v;
+
+body {
+  font-family: f.$body-font;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: f.$title-font;
+  color: v.$txt-color;
+}
+h1 {
+    font-size:2.8rem;
+}
+h2 {
+    font-size:2.3rem;
+}
+h3 {
+    font-size:2rem;
+}
+h3 {
+    font-size:1.5rem;
+}
+p {
+  font-family: f.$body-font;
+  margin-bottom: 1rem;
+}
+.mi-texto {
+  color: map-get(v.$colors, "primary");
+}

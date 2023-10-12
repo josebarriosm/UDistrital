@@ -1,0 +1,43 @@
+@use "variables" as v;
+
+// Recorre el map de colores
+@each $key, $val in v.$colors {
+  // Color de textos
+  .text-#{$key} {
+    color: $val;
+  }
+
+  // Background
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // Verifica que no se generen variaciones para los colores negro y blanco
+  @if ($val != #000 and $val != #fff) {
+    // Variaciones claras
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10%);
+      }
+    }
+
+    @for $i from 1 through 9 {
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10%);
+      }
+    }
+
+    // Variaciones oscuras
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10%);
+      }
+    }
+
+    @for $i from 1 through 9 {
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10%);
+      }
+    }
+  }
+}

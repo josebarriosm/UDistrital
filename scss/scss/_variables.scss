@@ -1,0 +1,49 @@
+// Colores
+$txt-color: #000;
+$bg-color: navy;
+$color: #fff;
+
+// Bordes
+$borde-delgado: 1px solid $bg-color;
+$borde-grueso: 3px solid $bg-color;
+
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #1a8754;
+$danger: #dc3545;
+$warning: #ffc008;
+$info: #11caf0;
+$white: #fff;
+$black: #000;
+$error: red;
+
+// Definición del map color como un array
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "white": $white,
+  "black": $black,
+  "error": $error,
+);
+
+//@debug $colors;
+//--- Como obtener el valor de un elemento del map color
+//@debug map-get($colors, "primary");
+//--- Verificar si el map color tiene un elemento
+// @debug map-has-key($map: $colors, $key: "info");
+//@debug map-has-key($map: $colors, $key: "secondary");
+
+// ---Eliminar un elemento del map color
+//@debug map-remove($colors, "error");
+
+// ---Agregar un elemento al map color
+//@debug map-merge(
+//  $colors,
+//  (
+//    "warning": orange,
+//  )
+//);

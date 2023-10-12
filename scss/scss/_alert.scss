@@ -1,0 +1,33 @@
+// el mixin no genera css
+@mixin alerta($fondo: #eee) {
+    font: size 1.5rem;
+    padding:10px;
+    text-align: center;
+    background-color: $fondo;    
+    margin:15px;
+    border: 1px solid darken($fondo, 30%);
+    border-radius: 10px;
+
+    h4 {
+        font-size:1.4rem;
+        color:darken($fondo, 60%);
+    }
+    p {
+        color:darken($fondo, 50%);
+    }
+}
+
+.alert {
+    @include alerta();
+}
+.alert-success {
+    @include alerta($fondo: #9fff9f);
+}
+
+.alert-warning {
+    @include alerta($fondo: #ffe4b2);
+}
+
+.alert-danger {
+    @include alerta($fondo: #ffc8c8);
+}
